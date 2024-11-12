@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Titulo"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:background="@color/cardview_shadow_start_color"
+            android:padding="10dp"
+            android:textStyle="bold"
+            />
+
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/heading"
+            android:columnCount="2"
+            >
+
+            <TextView
+                android:id="@+id/subheading"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/heading"
+
+                android:background="@color/cardview_shadow_start_color"
+                android:padding="5dp"
+                android:textColor="#A637A4"
+                android:text="Subtítulo"
+                android:textAppearance="@android:style/TextAppearance"
+                tools:layout_editor_absoluteX="80dp"
+                tools:layout_editor_absoluteY="40dp"
+
+                />
+
+
+
+
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/subheading"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <EditText
+                        android:id="@+id/article"
+                        android:layout_width="335dp"
+                        android:layout_height="wrap_content"
+                        android:autoLink="web"
+                        android:lineSpacingExtra="5sp"
+                        android:text="@string/article">
+
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/but"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add comment"></Button>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </GridLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
